@@ -1,0 +1,22 @@
+server.port: ${PORT:9999}
+info.component: "Zuul Proxy"
+
+
+endpoints:
+  restart.enabled: true
+  shutdown.enabled: true
+  health.sensitive: false
+
+
+zuul:
+  ignored-services: '*'
+  ignored-patterns: /**/api/**
+
+  routes:
+    hello-discovery: /hello/**
+    discovery-service: /eureka/**
+
+
+ribbon:
+  connect-timeout: 3000
+  read-timeout: 60000    
