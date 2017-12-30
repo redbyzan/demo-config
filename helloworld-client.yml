@@ -13,7 +13,7 @@ zuul:
   ignored-patterns: /**/api/**
 
   routes:
-    hello-service: /hello/**
+    helloworld-service: /hello/**
     discovery-service: /eureka/**
 
 
